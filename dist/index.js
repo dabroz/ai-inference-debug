@@ -58507,7 +58507,7 @@ function buildResponseFormat(promptConfig) {
  * Build complete InferenceRequest from prompt config and inputs
  */
 function buildInferenceRequest(promptConfig, systemPrompt, prompt, modelName, temperature, topP, maxTokens, endpoint, token) {
-		coreExports.warning(`buildInferenceRequest systemPrompt = '${systemPrompt}' prompt = '${prompt}' modelName = '${modelName}' temperature = '${temperature}' topP = '${topP}' maxTokens = '${maxTokens}' endpoint = '${endpoint}' token = '${token}'`);
+	coreExports.warning(`JS JS buildInferenceRequest promptConfig='${JSON.stringify(promptConfig)}' systemPrompt = '${systemPrompt}' prompt = '${prompt}' modelName = '${modelName}' temperature = '${temperature}' topP = '${topP}' maxTokens = '${maxTokens}' endpoint = '${endpoint}' token = '${token}'`);
     const messages = buildMessages(promptConfig, systemPrompt, prompt);
     const responseFormat = buildResponseFormat(promptConfig);
     return {
