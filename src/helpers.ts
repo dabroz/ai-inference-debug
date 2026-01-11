@@ -88,6 +88,16 @@ export function buildInferenceRequest(
   endpoint: string,
   token: string,
 ): InferenceRequest {
+  core.warning(`buildInferenceRequest parameters: {
+    systemPrompt: '${systemPrompt}',
+    prompt: '${prompt}',
+    modelName: '${modelName}',
+    temperature: ${temperature},
+    topP: ${topP},
+    maxTokens: ${maxTokens},
+    endpoint: '${endpoint}',
+    token: '${token}'
+  }`);
   const messages = buildMessages(promptConfig, systemPrompt, prompt)
   const responseFormat = buildResponseFormat(promptConfig)
 
